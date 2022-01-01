@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+}
+.nav{
+    display: flex;
+    height: 10vh;
+}
+img{
+    height: 7vh;
+    width: 10vw;
+    margin-left: 50px;
+}
+.left{
+    display: flex;
+    flex: 5;
+    width: 70vw;
+    line-height: 10vh;
+    align-items: center;
+}
+.right{
+    display: flex;
+    flex: 3;
+    width: 30vw;
+    line-height: 10vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+input{
+    border: none;
+    outline: none;
+    width: 30vw;
+    height: 7vh;
+}
+.searchbox{
+    display: flex;
+    align-items: center;
+    border:1px solid black;
+    border-radius: 1rem;
+    margin-left: 150px;
+    width: 35vw;
+}
+.container{
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+}
+.leftcontainer{
+    display: flex;
+    flex-direction: column;
+    height: 89vh;
+    gap: 2rem;
+    margin-left: 25px;
+    width: 20vw;
+}
+.rightcontainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 89vh;
+    width: 75vw;
+    
+}
+.box{
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 7vh;
+    width: 6vw;
+    margin-top: 15px;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.flexdisplay{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+
+.boxes{
+    margin-top: 15px;
+    border: 1px solid black;
+    width: 20vw;
+    height: 20vh;
+}
+th {
+    background-color: white;
+    width: 17em;
+    height: 3em;
+    font-weight: 100;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(207, 207, 207);
+  }
+  
+  td {
+    text-align: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    width: 17em;
+    height: 3em;
+    font-weight: 100;
+  }
+  .tabledis{
+      display: none;
+  }
+
