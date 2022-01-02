@@ -50,11 +50,11 @@ a{
     width: 100vw;
     align-items: center;
     justify-content: center;
-    gap: 10rem;
+    gap: 5rem;
 }
 .one{
     height: 40vh;
-    width: 30vh;
+    width: 25vw;
     border: 1px solid black;
     border-radius: 20px;
     display: flex;
@@ -65,7 +65,7 @@ a{
 }
 .two{
     height: 40vh;
-    width: 30vh;
+    width: 25vw;
     border: 1px solid black;
     border-radius: 20px;
     display: flex;
@@ -76,7 +76,7 @@ a{
 }
 .three{
     height: 40vh;
-    width: 30vh;
+    width: 25vw;
     border: 1px solid black;
     border-radius: 20px;
     display: flex;
