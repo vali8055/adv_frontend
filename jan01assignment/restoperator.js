@@ -13,7 +13,7 @@ function fn(){
     let a=document.getElementById('inpfield').value
     let b=a.split(",")
     console.log(b)
-    let s=smallestAll.apply(null,b)
+    let s=smallestAll.apply(b)
     let c=document.getElementById('results')
     let result=document.createElement('p')
     c.appendChild(result)
