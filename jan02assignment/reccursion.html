@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Using Recursion</title>
+</head>
+
+<body>
+    <h1>Factorial of a number using Recursion give the input number in the input field</h1>
+    <input type="text" id="inpfields">
+    <input type="submit" onclick="fn()">
+    <script>
+        function fn() {
+            let a = document.getElementById('inpfields').value
+            let b = getFact(a)
+            let result=document.createElement('p')
+            result.innerText=b
+            document.body.appendChild(result)
+        }
+
+        function getFact(n) {
+            if (n == 0) {
+                return 1;
+            }
+            else
+            return n * getFact(n - 1);
+        }
+
+    </script>
+</body>
+
+</html>

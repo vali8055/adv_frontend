@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LockScreen</title>
+    <style>
+        .createpassword {
+            width: 60vw;
+            height: 25vh;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        #validate {
+            width: 65vw;
+            height: 70vh;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+
+        input {
+            width: 25px;
+            height: 30px;
+        }
+
+        .pass {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        #keypad {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+            width: 30vw;
+            height: 30vh;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        #five {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="createpassword">
+        <h1 align="center">Create your Password</h1>
+        <div class="pass">
+            <input type="text" id="one" required maxlength="1">
+            <input type="text" id="two" required maxlength="1">
+            <input type="text" id="three" required maxlength="1">
+            <input type="text" id="four" required maxlength="1">
+            <button id="create">Create Password</button>
+        </div>
+    </div>
+    <div id="validate" >
+        <h1 align="center">Enter the key to Unlock</h1>
+        <div class="pass">
+            <input type="password" id="five" maxlength="4">
+            <button id="unlock">Unlock</button>
+        </div>
+        <div id="keypad">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">*</button>
+            <button class="btn">0</button>
+            <button class="btn">#</button>
+        </div>
+    </div>
+    <script>
+        var valid=document.getElementById('validate')
+        valid.style.display="none"
+            
+        let created = document.getElementById('create')
+        created.addEventListener('click', fn)
+        let btns = document.querySelectorAll('.btn')
+        btns.forEach(singlebutton => {
+            singlebutton.addEventListener('click', pass)
+        })
+        var a = []
+        function fn() {
+            b = document.getElementById('one').value
+            a.push(b)
+            c = document.getElementById('two').value
+            a.push(c)
+            d = document.getElementById('three').value
+            a.push(d)
+            e = document.getElementById('four').value
+            a.push(e)
+            valid.style.display="block"
+        }
+        var g
+        var s = document.getElementById('five')
+        function pass() {
+            s.value += this.innerText
+        }
+        let unlocked = document.getElementById('unlock')
+        unlocked.addEventListener('click', fn2)
+        function fn2() {
+            let v=s.value
+           let x= v.split("")
+            console.log(x)
+            console.log(a)
+            if(JSON.stringify(a)==JSON.stringify(x)){
+                alert("the screet is unlocked")
+            }
+            else
+            alert("please enter correct password")
+        }
+
+
+    </script>
+</body>
+
+</html>

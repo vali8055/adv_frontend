@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Application</title>
+    <style>
+        .container {
+            display: flex;
+            width: 80vw;
+            height: max-content;
+            margin: auto;
+            border: 1px solid black;
+            box-shadow: 0 0 20px black;
+        }
+
+        .fizz {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fizz">
+            <h1 align="center">Welcome to FizzBuzz Series</h1>
+            <input type="number" id="inp">
+            <button onclick="fn()">Calculate</button>
+            <ul id="result"></ul>
+        </div>
+    </div>
+    <script>
+        function fn() {
+            let a = document.getElementById("inp").value
+            var list = document.getElementById('result')
+            for (let i = 1; i <= a; i++) {
+                if (i % 3 == 0) {
+                    if (i % 5 == 0) {
+                        var li = document.createElement('li');
+                        li.innerText = "FizzBuzz";
+                        list.appendChild(li);
+                    }
+                    else {
+                        var li = document.createElement('li');
+                        li.innerText = "Fizz";
+                        list.appendChild(li);
+                    }
+                }
+                else {
+                    if (i % 5 == 0) {
+                        var li = document.createElement('li');
+                        li.innerText = "Buzz";
+                        list.appendChild(li);
+                    }
+                    else {
+                        var li = document.createElement('li');
+                        li.innerText = i;
+                        list.appendChild(li);
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
