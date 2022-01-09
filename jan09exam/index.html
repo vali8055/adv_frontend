@@ -1,0 +1,167 @@
+<!-- Design a sorting algorithm visualiser you can use any sorting algorithm show your creativity -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualiser</title>
+    <style>
+        body {
+            background-color: cornsilk;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: cadetblue;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: rgb(119, 118, 115);
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            height: 80vh;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            position: relative;
+            margin: 0 auto;
+            height: 50vh;
+            width: 70vw;
+            border: 1px solid black;
+
+        }
+
+        .bar {
+            width: 28px;
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            background-color: rgb(0, 183, 255);
+            transition: 0.2s all ease;
+        }
+
+        .bar__id {
+            position: absolute;
+            top: -24px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Selection Sort Visualizer</h1>
+        <div class="box"></div>
+        <button onclick="generate()">Generate Array</button>
+        <button onclick="SelectionSort()">Selection Sort</button>
+    </div>
+    <script>
+        const container = document.querySelector('.box')
+        function generatebar(num = 44) {
+            for (let i = 0; i < num; i += 1) {
+                const value = Math.floor(Math.random() * 100) + 10
+                const bar = document.createElement("div")
+                bar.classList.add('bar')
+                bar.style.height = `${value * 3}px`
+                bar.style.transform = `translateX(${i * 30}px)`
+                const barlabel = document.createElement('label')
+                barlabel.classList.add('bar_id')
+                barlabel.innerHTML = value
+                bar.appendChild(barlabel)
+                container.appendChild(bar)
+            }
+        }
+        // asynchronous function to perform "Selection Sort"
+        async function SelectionSort(delay = 30) {
+            let bars = document.querySelectorAll(".bar");
+            // Assign 0 to min_idx
+            var min_idx = 0;
+            for (var i = 0; i < bars.length; i += 1) {
+
+                // Assign i to min_idx
+                min_idx = i;
+
+                // Provide darkblue color to the ith bar
+                bars[i].style.backgroundColor = "yellow";
+                for (var j = i + 1; j < bars.length; j += 1) {
+
+                    // Provide red color to the jth bar
+                    bars[j].style.backgroundColor = "red";
+
+                    // To pause the execution of code for 300 milliseconds
+                    await new Promise((resolve) =>
+                        setTimeout(() => {
+                            resolve();
+                        }, 30)
+                    );
+
+                    // To store the integer value of jth bar to var1 
+                    var val1 = parseInt(bars[j].childNodes[0].innerHTML);
+
+                    // To store the integer value of (min_idx)th bar to var2 
+                    var val2 = parseInt(bars[min_idx].childNodes[0].innerHTML);
+
+                    // Compare val1 & val2
+                    if (val1 < val2) {
+                        if (min_idx !== i) {
+                            // Provide skyblue color to the (min-idx)th bar
+                            bars[min_idx].style.backgroundColor = "  rgb(24, 190, 255)";
+                        }
+                        min_idx = j;
+                    } else {
+
+                        // Provide skyblue color to the jth bar
+                        bars[j].style.backgroundColor = "  rgb(24, 190, 255)";
+                    }
+                }
+
+                // To swap ith and (min_idx)th bar
+                var temp1 = bars[min_idx].style.height;
+                var temp2 = bars[min_idx].childNodes[0].innerText;
+                bars[min_idx].style.height = bars[i].style.height;
+                bars[i].style.height = temp1;
+                bars[min_idx].childNodes[0].innerText = bars[i].childNodes[0].innerText;
+                bars[i].childNodes[0].innerText = temp2;
+
+                // To pause the execution of code for 300 milliseconds
+                await new Promise((resolve) =>
+                    setTimeout(() => {
+                        resolve();
+                    }, 30)
+                );
+
+                // Provide skyblue color to the (min-idx)th bar
+                bars[min_idx].style.backgroundColor = "  rgb(24, 190, 20)";
+
+                // Provide lightgreen color to the ith bar
+                bars[i].style.backgroundColor = " rgb(49, 226, 13)";
+            }
+        }
+        generatebar()
+        function generate() {
+            window.location.reload()
+        }
+
+    </script>
+</body>
+
+</html>
