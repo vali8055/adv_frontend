@@ -1,0 +1,102 @@
+[
+    {
+        "q": "How many days do we have in a week?",
+        "options": [
+            {"option1":"7"},
+            {"option2":"6"},
+            {"option3":"8"},
+            {"option4":"9"}
+        ],
+        "answer": "7"
+    },
+    {
+        "q": "How many days are there in a normal year?",
+        "options": [
+            {"option1":"400"},
+            {"option2":"365"},
+            {"option3":"300"},
+            {"option4":"1000"}
+        ],
+        "answer": "365"
+    },
+    {
+        "q": "Which animal is called King of Jungle?",
+        "options": [
+            {"option1":"Cat"},
+            {"option2":"Lion"},
+            {"option3":"Pig"},
+            {"option4":"Elephant"}
+        ],
+        "answer": "Lion"
+    },
+    {
+        "q": "Which is the tallest animal on the earth?",
+        "options": [
+            {"option1":"Giraffe"},
+            {"option2":"Zebra"},
+            {"option3":"Bengal Tiger"},
+            {"option4":"Crocodile"}
+        ],
+        "answer": "Giraffe"
+    },
+    {
+        "q": "Which festival is called the festival of light?",
+        "options": [
+            {"option1":"Pongal"},
+            {"option2":"Ramzan"},
+            {"option3":"Diwali"},
+            {"option4":"Holi"}
+        ],
+        "answer": "Diwali"
+    },
+    {
+        "q": "Who was the first man to walk on the moon?",
+        "options": [
+            {"option1":"Neil armstrong"},
+            {"option2":"Buzz Aldrin"},
+            {"option3":"Robert Downy Jr"},
+            {"option4":"Tom Holland"}
+        ],
+        "answer": "Neil armstrong"
+    },
+    {
+        "q": "Which is the longest river on the earth?",
+        "options": [
+            {"option1":"Godavari"},
+            {"option2":"Krishna"},
+            {"option3":"Nile"},
+            {"option4":"Narmada"}
+        ],
+        "answer": "Nile"
+    },
+    {
+        "q": "Which is the tallest mountain in the world?",
+        "options": [
+            {"option1":"Mount Everest"},
+            {"option2":"Mt Kilimangaro"},
+            {"option3":"Denali"},
+            {"option4":"Aconcagua"}
+        ],
+        "answer": "Mount Everest"
+    },
+    {
+        "q": "How many lungs does the human body have?",
+        "options": [
+            {"option1":"Zero"},
+            {"option2":"Five"},
+            {"option3":"Three"},
+            {"option4":"Two"}
+        ],
+        "answer": "Two"
+    },
+    {
+        "q": "Which day is observed as world literacty day?",
+        "options": [
+            {"option1":"May 18"},
+            {"option2":"March 13"},
+            {"option3":"September 8"},
+            {"option4":"November 1"}
+        ],
+        "answer": "September 8"
+    }
+]
