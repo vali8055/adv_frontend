@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManageART Works</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="leftnav">
+            <div id="topheader">
+                <img id="art" src="https://www.cphi-online.com/Logo_HR-comp296688.png" />
+            </div>
+            <div id="buttons">
+                <button id="dash" onclick="dash()">Dashboard</button>
+                <button id="start" onclick="start()">Start a new Project</button>
+                <hr>
+                <p>Workflow</p>
+                <button id="work" onclick="start()">Inbox</button>
+                <button id="my pro" onclick="start()">My Projects</button>
+                <button id="all pro" onclick='start()'>All Projects</button>
+                <hr>
+                <p>Asset Library</p>
+                <button id="search" onclick="searchs()">Search</button>
+                <button id="browse" >Browse</button>
+                <p>Reports</p>
+                <hr>
+            </div>
+        </div>
+        <div id="rightnav">
+            <div id="hide">
+                <span>Api Fetch details</span>
+                <table id="table">
+                    <tr >
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Year</th>
+                        <th>Color</th>
+                    </tr>
+                </table>
+            
+            </div>
+         <div id="hide2" class="text">
+
+         </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".left-right").click(function(){
+          $(".text").animate({
+            width: "toggle"
+          });
+        });
+      });
+    </script>
+    
+</body>
+
+</html>

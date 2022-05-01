@@ -1,0 +1,133 @@
+#container{
+    height: 100vh;
+    width: 100vw;
+}
+#leftnav{
+    float: left;
+    background-color: gray;
+    height: 100vh;
+    width: 20vw;
+}
+#rightnav{
+    float: right;
+    height: 100vh;
+    width: 80vw;
+}
+#topheader{
+    height: 20vh;
+    width: 20vw;
+    margin: auto;
+}
+#art{
+    float: left;
+    height: 15vh;
+    width: 20vw;
+}
+button{
+    text-decoration: none;
+    border: none;
+    background-color: gray;
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+button:hover{
+    transition: 0.7s;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.dashs{
+    height: 100vh;
+    width: 80vw;
+}
+.input{
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    width: 350px;
+    height:30px;
+    box-shadow:  0  0 1px black;
+}
+.btn{
+    display: flex;
+    margin: auto;
+    margin-top:20px;
+    background-color: rgb(194, 164, 68);
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+}
+/* .searchcontainer{
+    height: 20vh;
+    width: 80vw;
+} */
+/* .tables{
+    height: 80vh;
+    width: 80vw;
+} */
+#table{
+    font-family: Arial;
+    border-collapse: collapse;
+    width: 30vw;
+    height: 50vh;
+    
+}
+#table th, #table td{
+    border: 2px solid black;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color: black;
+}
+#table tr:nth-child(2n){
+    background-color: rgb(133, 166, 236);
+}
+#table tr:hover{
+    background-color: white;
+}
+#table td{
+    text-align: center;
+}
+span{
+    font-size: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+margin-bottom: 30px;
+
+}
+#hide{
+    float: left;
+    width: 30vw;
+    height: 100vh;
+    
+    margin-top: 10px;
+
+        
+        
+     
+}
+#ids{
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+}
+#hide2{
+    float:right;
+    width: 49vw;
+    height: 20vh;
+    margin-top: 20vh;
+    
+    
+        
+        
+     
+}
+.text{
+    float:right;
+    overflow: hidden;
+  }
+
